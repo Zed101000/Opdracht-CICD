@@ -26,7 +26,7 @@ jobs:
 
           # File containing the version Spec of the version to use.  Examples: package.json, .nvmrc, .node-version, .tool-versions.
           # If node-version and node-version-file are both provided the action will use version from node-version. 
-          node-version-file: './package.json'
+          node-version-file: '../../package.json'
 
           # Set this option if you want the action to check for the latest available version 
           # that satisfies the version spec.
@@ -60,7 +60,7 @@ jobs:
           # It will generate hash from the target file for primary key. It works only If cache is specified.  
           # Supports wildcards or a list of file names for caching multiple dependencies.
           # Default: ''
-          cache-dependency-path: 'package-lock.json'
+          cache-dependency-path: '../../package-lock.json'
 
           # Optional registry to set up for auth. Will set the registry in a project level .npmrc and .yarnrc file, 
           # and set up auth to read in from env.NODE_AUTH_TOKEN.
