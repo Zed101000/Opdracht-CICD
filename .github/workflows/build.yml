@@ -88,4 +88,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: build image and tag it
-        run: docker build -t zedknapen/webapp:latest ./dockerfile
+        run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest .
