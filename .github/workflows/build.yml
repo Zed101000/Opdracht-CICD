@@ -14,3 +14,11 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
+  node-env:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: dreamcodez/dead-simple-nodejs@1
+        with:
+            NODE_VERSION: 20.1.0
+      - run: yarn install
+      - run: yarn lint
