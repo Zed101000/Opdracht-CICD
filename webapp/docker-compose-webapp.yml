@@ -1,0 +1,26 @@
+services:
+  database:
+    image: mysql
+    restart: always
+    volumes:
+      - type: bind
+        source: ./database
+        target: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: animals
+  webapp:
+    image: webapp
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      MYSQL_URL: mysql://root:example@database:3306/animals
+  test:
+    build: .
+    restart: always
+    depends_on: 
+      - webapp
+    environment:
+      API_URL: http://webapp:3000
+    command: yarn test 
