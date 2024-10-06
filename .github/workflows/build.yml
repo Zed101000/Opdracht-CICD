@@ -47,7 +47,7 @@ jobs:
           # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
           # Package manager should be pre-installed
           # Default: ''
-          cache: 'yarn'
+          cache: 'yarn.lock'
 
           # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. 
           # It will generate hash from the target file for primary key. It works only If cache is specified.  
