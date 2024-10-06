@@ -49,7 +49,7 @@ jobs:
           # [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
           #
           # Default: ${{ github.server_url == 'https://github.com' && github.token || '' }}
-          token: ${{ github.server_url == 'https://github.com' && github.token || ''
+          token: ${{ github.server_url == 'https://github.com' && github.token || '' }}
 
           # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
           # Package manager should be pre-installed
