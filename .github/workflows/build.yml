@@ -89,3 +89,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: build image and tag it
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest .
+            -
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          tags: user/webapp:latest
